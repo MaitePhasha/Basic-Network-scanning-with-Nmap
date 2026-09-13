@@ -1,5 +1,17 @@
 # Basic-Network-scanning-with-Nmap
 A practical cybersecurity lab documenting network reconnaissance and Nmap scanning techniques.
+
+## What is Nmap?
+Nmap (Network Mapper) is a network scanning tool used to discover hosts and services on a network. It can identify open ports, running services, service versions, and, in some cases, the operating system of a target system.
+
+## Why Network Scanning Matters
+Network scanning helps cybersecurity professionals understand what devices and services are exposed on a network. It can be used to identify open ports, discover running services, and find potential security weaknesses that should be investigated and secured.
+
+## Ethical Use Guidelines
+Nmap should only be used on systems and networks that you own or have explicit permission to test. Scanning systems without authorization can be intrusive and may violate organizational policies or laws.
+
+For this project, all scanning is performed within my own controlled virtual lab environment for educational and cybersecurity training purposes.
+
 ##Nmap Installation
 ## Step 1
 I first updated the nmap repository
