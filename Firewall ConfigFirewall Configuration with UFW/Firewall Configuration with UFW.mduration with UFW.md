@@ -39,17 +39,19 @@ The denied HTTP traffic was tested to verify that the firewall rule was being en
 The testing method and results are documented in the screenshots included in this project.
 
 Why These Rules Were Chosen
-
 The rules were selected to demonstrate both allowing and denying network traffic.
 
 SSH was allowed to permit secure remote administration.
 HTTP was denied to demonstrate blocking a specific service.
 HTTPS was allowed to demonstrate permitting encrypted web traffic.
 A specific IP range was denied to demonstrate restricting traffic based on its source network.
-What I Learned
 
+What I Learned
 Through this task I learned how to install, enable and configure UFW, create allow and deny rules, restrict traffic by port and IP range, and verify firewall rules from the Linux command line.
 
 Evidence
-
 Screenshots of the UFW configuration, active rules and testing results are included in the Screenshots folder.
+
+The Script
+
+The  contains the firewall rules and applies them in sequence.
