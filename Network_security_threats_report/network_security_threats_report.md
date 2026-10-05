@@ -1,13 +1,13 @@
 # 1. DoS vs DDoS
 
-##What is DoS?
+## What is DoS?
 Denial of Service (DoS) means an attacker tries to make a service unavailable to legitimate users.
 Imagine a small restaurant with 10 tables.
 One person keeps calling the restaurant and reserving all 10 tables, repeatedly.
 Real customers can't get a table.
 That's essentially the idea behind DoS.
 
-##DDoS?
+## DDoS?
 Distributed Denial of Service is the same goal, but the traffic comes from many systems.
 The machines sending the traffic may be compromised devices in a botnet.
 CISA explains that DoS generally uses a single source, while DDoS uses multiple sources, often compromised computers coordinated as a botnet.
