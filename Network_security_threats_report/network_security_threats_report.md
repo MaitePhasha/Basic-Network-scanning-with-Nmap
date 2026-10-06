@@ -47,3 +47,19 @@ MITM = Man-in-the-Middle.
 An attacker gets themselves between two parties that are communicating so that they can potentially observe, intercept, or manipulate the communication.
 Normally, the communication is supposed to happen directly between you and the website.
 With MITM, the attacker is trying to become the "middle."
+
+### Why is this dangerous?
+
+Imagine you're using online banking.
+You send:
+Username: Maite
+Password: ********
+If an attacker can successfully intercept that communication, they might potentially obtain sensitive information.
+But MITM isn't only about reading traffic, the attacker may also try to modify traffic.
+
+## Real-world example: DigiNotar
+
+DigiNotar was compromised, and fraudulent certificates were issued.
+That was serious because certificates can be used to make a malicious system appear to be a legitimate website.
+This could support attacks where an attacker attempts to impersonate a legitimate site and intercept encrypted communications.
+The incident became a major example of why certificate trust and validation matter for preventing MITM attacks.
