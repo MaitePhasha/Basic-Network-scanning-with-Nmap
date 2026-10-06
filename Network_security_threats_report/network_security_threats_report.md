@@ -122,3 +122,29 @@ IP spoofing can make it more difficult to determine the true source of malicious
 2. **Egress filtering:** Organizations can filter outgoing traffic to prevent internal systems from sending packets with forged or unauthorized source addresses. This can help prevent compromised systems from participating in spoofing-based attacks.
 
 3. **DDoS and reflection protection:** Organizations can use DDoS protection, traffic filtering, rate limiting, and appropriate configuration of network services to reduce the impact of reflection and amplification attacks that rely on spoofed addresses.
+
+## 4. DNS Poisoning/Spoofing
+
+### How the Attack Works
+
+The Domain Name System (DNS) translates human-readable domain names into IP addresses so that systems can locate services on a network or the internet. DNS poisoning or spoofing occurs when an attacker causes false DNS information to be accepted, potentially causing a legitimate domain name to resolve to an attacker-controlled or otherwise incorrect IP address.
+
+One form of this attack is DNS cache poisoning, where false DNS information is stored in the cache of a recursive DNS resolver. When users subsequently request the affected domain, the resolver may return the incorrect IP address from its cache. This can redirect users to malicious infrastructure even though they entered the legitimate domain name.
+
+DNS attacks can therefore affect the integrity of name resolution and can potentially be used to redirect users to malicious websites, support phishing attacks, or facilitate further attacks such as credential theft and Man-in-the-Middle attacks.
+
+### Real-World Example
+
+A notable real-world example is the Sea Turtle DNS hijacking campaign documented by Cisco Talos. The campaign involved attackers compromising DNS-related infrastructure and manipulating DNS information to redirect victims toward attacker-controlled systems. The incident demonstrated how compromising DNS infrastructure can allow attackers to redirect traffic while victims continue to use legitimate domain names.
+
+### Impact
+
+DNS poisoning and spoofing can redirect users from legitimate services to malicious destinations. This can result in credential theft, phishing, malware delivery, interception of sensitive information, and loss of trust in online services. Organizations can also experience reputational damage and operational disruption if their DNS infrastructure or domain resolution is compromised.
+
+### Mitigation Strategies
+
+1. **DNSSEC:** Organizations can deploy DNSSEC to provide cryptographic validation of DNS data and help protect the integrity and authenticity of DNS responses.
+
+2. **Secure DNS administration:** DNS infrastructure should be securely configured and protected using strong authentication, Multi-Factor Authentication (MFA), access controls, software updates, and restricted administrative access.
+
+3. **DNS monitoring and logging:** Organizations should monitor DNS activity and maintain logs to identify unexpected changes, suspicious queries, unusual DNS responses, or unauthorized modifications to DNS records.
