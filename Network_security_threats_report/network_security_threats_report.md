@@ -63,3 +63,33 @@ DigiNotar was compromised, and fraudulent certificates were issued.
 That was serious because certificates can be used to make a malicious system appear to be a legitimate website.
 This could support attacks where an attacker attempts to impersonate a legitimate site and intercept encrypted communications.
 The incident became a major example of why certificate trust and validation matter for preventing MITM attacks.
+Impact of MITM
+
+##A successful MITM attack can affect:
+
+### Confidentiality
+The attacker may obtain sensitive information such as:
+
+usernames
+passwords
+session information
+messages
+other sensitive data
+
+### Integrity
+The attacker may attempt to modify communications.
+
+###Authentication
+The attacker may attempt to impersonate a legitimate service or system.
+
+### Financial loss
+If credentials or transactions are compromised, victims or organizations may suffer financial damage.
+
+## Impact of MITM
+
+1. Use HTTPS/TLS
+Encrypt communications between clients and servers. This makes intercepted traffic much harder to read or modify.
+2. Proper certificate validation
+3. Don't blindly trust certificates. A client should verify that the certificate is valid and belongs to the intended service.
+This is one of the reasons browsers warn you when something is wrong with a website's certificate.
+For example: "Your connection is not private." That warning shouldn't simply be ignored.
