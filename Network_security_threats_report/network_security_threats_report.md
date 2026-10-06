@@ -63,11 +63,12 @@ DigiNotar was compromised, and fraudulent certificates were issued.
 That was serious because certificates can be used to make a malicious system appear to be a legitimate website.
 This could support attacks where an attacker attempts to impersonate a legitimate site and intercept encrypted communications.
 The incident became a major example of why certificate trust and validation matter for preventing MITM attacks.
-Impact of MITM
 
-##A successful MITM attack can affect:
+## Impact of MITM
 
-### Confidentiality
+### A successful MITM attack can affect:
+
+#### Confidentiality
 The attacker may obtain sensitive information such as:
 
 usernames
@@ -76,20 +77,48 @@ session information
 messages
 other sensitive data
 
-### Integrity
+#### Integrity
 The attacker may attempt to modify communications.
 
-###Authentication
+#### Authentication
 The attacker may attempt to impersonate a legitimate service or system.
 
-### Financial loss
+#### Financial loss
 If credentials or transactions are compromised, victims or organizations may suffer financial damage.
 
-## Impact of MITM
+## Mitigation
 
 1. Use HTTPS/TLS
 Encrypt communications between clients and servers. This makes intercepted traffic much harder to read or modify.
 2. Proper certificate validation
-3. Don't blindly trust certificates. A client should verify that the certificate is valid and belongs to the intended service.
+Don't blindly trust certificates. A client should verify that the certificate is valid and belongs to the intended service.
 This is one of the reasons browsers warn you when something is wrong with a website's certificate.
 For example: "Your connection is not private." That warning shouldn't simply be ignored.
+3. Multi-Factor Authentication (MFA)
+MFA doesn't prevent an attacker from sitting between two network devices, but it can reduce the damage if credentials are stolen.
+
+## IP Spoofing
+
+### How the Attack Works
+
+IP spoofing occurs when an attacker falsifies the source IP address contained in network packets so that the traffic appears to originate from another system or address. The attacker does not necessarily have control of the address being impersonated; instead, the source information in the packet is manipulated.
+
+IP spoofing can be used for several purposes, including attempting to bypass poorly configured access controls, disguising the true source of malicious traffic, or supporting reflection and amplification attacks. In a reflection attack, an attacker can send requests with a spoofed source address belonging to the intended victim. The responding systems then send their responses toward the victim, potentially increasing the amount of traffic directed at the target.
+
+### Real-World Example
+
+IP spoofing has been widely associated with reflection and amplification attacks. In these attacks, attackers can forge the source IP address of packets so that responses from third-party systems are directed toward the victim. UDP-based services can be abused for this purpose because UDP does not require the same connection establishment process as TCP.
+
+Large-scale DDoS attacks have used spoofed source addresses together with vulnerable or exposed network services to generate traffic toward victims.
+
+### Impact
+
+IP spoofing can make it more difficult to determine the true source of malicious network traffic. It can also be used to support DDoS reflection and amplification attacks, potentially causing large amounts of unwanted traffic to reach a victim. In some environments, poorly configured security controls that rely heavily on source IP addresses may also be vulnerable to spoofed traffic.
+
+### Mitigation Strategies
+
+1. **Ingress filtering:** Network providers and administrators can filter incoming packets that contain source addresses that should not legitimately originate from the incoming interface. This helps prevent spoofed traffic from entering networks.
+
+2. **Egress filtering:** Organizations can filter outgoing traffic to prevent internal systems from sending packets with forged or unauthorized source addresses. This can help prevent compromised systems from participating in spoofing-based attacks.
+
+3. **DDoS and reflection protection:** Organizations can use DDoS protection, traffic filtering, rate limiting, and appropriate configuration of network services to reduce the impact of reflection and amplification attacks that rely on spoofed addresses.
