@@ -148,3 +148,44 @@ DNS poisoning and spoofing can redirect users from legitimate services to malici
 2. **Secure DNS administration:** DNS infrastructure should be securely configured and protected using strong authentication, Multi-Factor Authentication (MFA), access controls, software updates, and restricted administrative access.
 
 3. **DNS monitoring and logging:** Organizations should monitor DNS activity and maintain logs to identify unexpected changes, suspicious queries, unusual DNS responses, or unauthorized modifications to DNS records.
+
+## Comparison Table
+
+| Threat | Attack Vector | Who Is at Risk? | Difficulty to Execute | Ease of Mitigation |
+|---|---|---|---|---|
+| DoS/DDoS | Flooding a target with excessive traffic or requests to exhaust its resources | Organizations, websites, online services, and network infrastructure | Medium to High | Medium |
+| MITM | Intercepting or manipulating communication between two communicating parties | Network users, organizations, applications, and services | Medium to High | Medium |
+| IP Spoofing | Forging the source IP address of network packets | Networks, servers, and services that rely on source addresses for trust or filtering | Medium | Medium |
+| DNS Poisoning/Spoofing | Manipulating DNS information so that a domain resolves to an incorrect or malicious IP address | Internet users, organizations, and services that rely on DNS | Medium to High | Medium |
+
+## Conclusion
+
+Network security threats can affect the availability, confidentiality, and integrity of an organization's systems and information. DoS and DDoS attacks can disrupt services, MITM attacks can expose or manipulate communications, IP spoofing can be used to disguise the source of network traffic, and DNS poisoning can redirect users to unintended destinations.
+
+Three key takeaways for a network administrator are:
+
+1. **Protect availability:** Organizations should use appropriate traffic filtering, rate limiting, DDoS protection, and network monitoring to reduce the impact of denial-of-service attacks.
+
+2. **Protect communication and authentication:** Secure protocols such as HTTPS/TLS, proper certificate validation, network segmentation, and Multi-Factor Authentication (MFA) can reduce the risk and impact of attacks that attempt to intercept or manipulate communications.
+
+3. **Protect network infrastructure and monitor for abnormal activity:** Secure DNS administration, DNSSEC where appropriate, anti-spoofing controls, logging, and continuous network monitoring can help detect and prevent attempts to manipulate network traffic or redirect users.
+
+## References
+
+1. National Institute of Standards and Technology (NIST). "Secure Domain Name System (DNS) Deployment Guide." NIST Special Publication 800-81 Rev. 3. 2026. https://csrc.nist.gov/pubs/sp/800/81/r3/final
+
+2. Cybersecurity and Infrastructure Security Agency (CISA). "Understanding and Responding to Distributed Denial-of-Service Attacks." https://www.cisa.gov/resources-tools/resources/understanding-and-responding-distributed-denial-service-attacks
+
+3. Cybersecurity and Infrastructure Security Agency (CISA). "UDP-Based Amplification Attacks." https://www.cisa.gov/news-events/alerts/2014/01/17/udp-based-amplification-attacks
+
+4. National Institute of Standards and Technology (NIST). "Advanced DDoS Mitigation Techniques." https://www.nist.gov/programs-projects/advanced-ddos-mitigation-techniques
+
+5. MITRE ATT&CK. "Adversary-in-the-Middle (T1557)." https://attack.mitre.org/techniques/T1557/
+
+6. MITRE ATT&CK. "Network Denial of Service (T1498)." https://attack.mitre.org/techniques/T1498/
+
+7. Cisco Talos. "Sea Turtle Keeps on Swimming." https://blog.talosintelligence.com/sea-turtle-keeps-on-swimming/
+
+8. Microsoft. "Microsoft Security Advisory 2607712: Fraudulent Digital Certificates Could Allow Spoofing." https://learn.microsoft.com/en-us/security-updates/securityadvisories/2011/2607712
+
+9. U.S. Department of Justice. "Individual Pleads Guilty to Participating in Internet of Things Cyberattack in 2016." https://www.justice.gov/archives/opa/pr/individual-pleads-guilty-participating-internet-things-cyberattack-2016
