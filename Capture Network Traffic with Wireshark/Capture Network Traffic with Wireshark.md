@@ -19,4 +19,7 @@ On Debian-based Linux systems, packet capture permissions can be managed through
 After the permission configuration was completed, Wireshark was reopened and the network interface was available for packet capture.
 
 ### Verification
-Wireshark successfully displayed available network interfaces and allowed live traffic to be captured. This confirmed that the installation and packet-capture permissions were working correctly.
+
+Wireshark 4.2.2 was successfully launched on the Linux virtual machine. The network interface `enp0s3` was available for packet capture, confirming that the required packet-capture permissions were correctly configured.
+
+![Wireshark installation and interface](Screenshots/wireshark_installation_and_interface.png)
