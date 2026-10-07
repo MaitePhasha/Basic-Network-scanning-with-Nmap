@@ -1,6 +1,6 @@
 # Capture Network Traffic with Wireshark
 
-## 1. Wireshark Installation
+## Wireshark Installation
 
 Wireshark was installed on the Linux virtual machine to capture and analyse live network traffic.
 
