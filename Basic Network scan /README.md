@@ -1,6 +1,5 @@
-# Oasis-Infobyte-Security-Analyst/
 
-## Basic-Network-scanning-with-Nmap
+# Basic-Network-scanning-with-Nmap
 A practical cybersecurity lab documenting network reconnaissance and Nmap scanning techniques.
 
 ## What is Nmap?
